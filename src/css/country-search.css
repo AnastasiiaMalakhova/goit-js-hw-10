@@ -1,0 +1,24 @@
+#search-box {
+  font: inherit;
+  padding: 8px 15px;
+  max-width: 320px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background-color: rgba(255, 248, 220, 0.5);
+  border: 2px solid rgb(189, 183, 107);
+  font-size: 20px;
+  transition: border 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+#search-box:focus {
+  outline: none;
+  border: 2px solid rgb(240, 230, 140);
+  box-shadow: 5px 5px 5px 0px rgb(87, 88, 94, 0.5);
+}
+
+.container {
+  padding-top: 200px;
+  padding-bottom: 400px;
+  text-align: center;
+}
