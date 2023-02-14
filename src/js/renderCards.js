@@ -48,30 +48,3 @@ export default function renderCountriesCards(countries) {
     countryInfo.innerHTML = countriesArray;
   }
 }
-
-// function createMarkupCountriesList(countries) {
-//   return countries
-//     .map(country => {
-//       `<li class="country">
-//       <img src='${country.flags.svg}' alt='${country.flags.alt}' width=50 height=30 />
-//       <span>${country.name.official}</span>
-//     </li>`;
-//     })
-//     .join('');
-// }
-
-// function createMarkupCountryInfo(countries) {
-//   return countries
-//     .map(country => {
-//       `<img src='${country.flags.svg}' alt='${
-//         country.flags.alt
-//       }' width=50 height=30 />
-//     <span class="country-name"> <b>${country.name.official}</b></span>
-//     <p> <b>Capital:</b> ${country.capital}</p>
-//     <p> <b>Population:</b> ${country.population}</p>
-//     <p> <b>Languages:</b> ${Object.values(country.languages)}</p>`;
-//     })
-//     .join('');
-// }
-
-// export { createMarkupCountriesList, createMarkupCountryInfo };
