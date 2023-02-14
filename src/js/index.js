@@ -16,15 +16,23 @@ input.addEventListener('input', debounce(searchCountry, DEBOUNCE_DELAY));
 function searchCountry(e) {
   let searchForName = e.target.value.trim();
 
-  fetchCountries(searchForName)
-    .then(countries => {
-      renderCountriesCards(countries);
-    })
-    .catch(fetchError);
+  if (searchForName) {
+    fetchCountries(searchForName)
+      .then(countries => {
+        renderCountriesCards(countries);
+      })
+      .catch(fetchError);
+  } else {
+    removeMarkup();
+  }
 }
 
 function fetchError() {
+  removeMarkup();
+  return Notiflix.Notify.failure('Oops, there is no country with that name');
+}
+
+function removeMarkup() {
   countryInfo.innerHTML = '';
   countriesList.innerHTML = '';
-  return Notiflix.Notify.failure('Oops, there is no country with that name');
 }

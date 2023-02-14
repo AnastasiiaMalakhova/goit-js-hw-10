@@ -39,7 +39,7 @@ export default function renderCountriesCards(countries) {
           }</p>
           <p class="country-description"> <b>Languages:</b> ${Object.values(
             country.languages
-          )}</p>
+          ).join(', ')}</p>
         `;
         })
         .join('')
